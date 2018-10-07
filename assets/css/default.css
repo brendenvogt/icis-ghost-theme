@@ -1,0 +1,575 @@
+body {
+    background-color: #fff;
+    height:100%;
+    position: absolute;
+    width:100%;
+}
+
+.serif {
+    font-family: "kepler-std-caption","kepler-std-display", 'Kepler Std Display', 'Times New Roman', Times, serif;
+}
+
+.btn {
+    border-radius: 0%;
+}
+
+.card {
+    border-radius: 0%;
+}
+
+.card-img-top {
+    border-radius: 0%;
+}
+
+.linked-in-logo {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-top: -0.5rem;
+    margin-left: 0.2rem;
+}
+
+/*Navbar CSS*/
+
+.navbar {
+    background: #fff;
+}
+
+.caption-nav {
+    font-weight: 300;
+    /*A lighter, Sans-serif or Serif font to be used for the title.*/
+    /*font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;*/
+    margin-right: 0;
+}
+
+.navbar-brand img {
+    margin-right: 0.75rem;
+}
+
+#navbarMenu .nav {
+    margin-top: 0 !important;
+}
+
+.navbar-toggler {
+    border: none!important;
+    padding: 0;
+}
+
+.nav-link{
+    text-align: right;
+}
+/*About block css*/
+footer.site-footer {
+    /*background: #cbced1;*/
+    /* background: #bacee2; */
+    border-top: solid 2px #bacee2; 
+    padding: 0.75rem;
+    text-align: center;
+    margin-bottom: 0;
+}
+.copyright{
+    display: inline-block;
+    margin: 0.5rem;
+}
+.site-footer-nav{
+    margin: 0.4rem;
+    display: inline-block;
+}
+
+/*Index CSS*/
+.news-next-container .older-posts {
+    background: #fff;
+    /* border-radius: 5px; */
+    padding: 10px;
+    opacity: 0.95;
+}
+
+.site-header.jumbotron {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 0;
+}
+
+.jumbotron h1 {
+    margin: 0;
+}
+
+.hero-btn .btn {
+    margin-top: -0.75rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.site-title{
+    margin:2rem 0!important;
+}
+
+/*Article-feed*/
+#home-main{
+    background: #fff;
+}
+.site-main{
+    background: #f0f5fa;
+    padding:2rem 0;
+}
+/*Post-card*/
+.card.post-card{
+    background-color:inherit;
+    border: none;
+    padding: 0 1.5rem;
+    margin-bottom: 0.5rem;
+}
+/*.card.post-card a:hover{
+    text-decoration: none;
+}*/
+.card-body.post-card-content{
+    padding: 0.75rem 0;
+}
+.card-img-top{
+    height:180px;
+    border:none;
+    background-size: cover;
+    background-position: center;
+}
+.card-header.post-card-meta{
+    background-color: inherit;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    padding:1rem 0;
+}
+.card-header.post-card-meta.with-image{
+    border: none;
+}
+.post-card-excerpt{
+    margin-top: -0.125rem;
+}
+/* Updates block*/
+#updates-main{
+    /* background-size: cover; */
+    background-position-x: center;
+    padding-bottom: 1rem;
+}
+#update-feed{
+    background: #fff;
+    border-radius: 0;
+    /* on its own, the feed looks better with margins, but the comparison with the article block is eyesoring */
+    /* margin-left:0.5rem;
+    margin-right: 0.5rem; */
+    opacity: 0.95;
+}
+.news-next-container{
+    margin-top:1rem;
+}
+.news-next-container .older-posts span{
+    display: inline-block;
+    /* margin-top: -0.25rem; */
+    margin-left: 0.5rem;
+}
+.news-next-container .older-posts a:hover{
+    text-decoration: none;
+}
+/* Post.hbs */
+#post-main{
+    padding-bottom: 4rem;
+}
+.container.no-padding{
+    padding:0;
+}
+.post-full-meta{
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.post-full-image{
+    height: 480px;
+    background-size:cover;
+    background-position: center;
+}
+/* small screen performance */
+@media (max-width: 576px) {
+    .post-full-image{
+        height: 240px;
+    }
+    .post-full-card {
+        margin-top: -1rem!important;
+    }
+}
+article.post-full{
+    padding-left:0;
+    padding-right:0;
+}
+.post-full-title{
+    font-size: 3.2rem!important;
+    margin-top: 0.25rem;
+    /* font-weight: 600; */
+    margin-bottom: 1.875rem;
+}
+.post-full-content-container{
+    background: #fff;
+}
+.post-full-content-container{
+    /* font-size: 1.125rem; */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height: 2.25rem;
+    margin-top: -1rem;
+    background: none;
+}
+.post-full-content {
+    display: flex;
+    display: -ms-flexbox;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    -ms-flex-direction: column;
+    -ms-flex-align: center;
+}
+.post-full-content p,
+.post-full-content img{
+    width: 100%;
+}
+.post-full-content .kg-width-full img{
+    width: 100vw;
+    max-width: 100vw;
+}
+.post-full-content .kg-width-wide img{
+    max-width: 1040px;
+    width: 120%;
+}
+.post-full-content div{
+    max-width: 100%;
+}
+.kg-image-card,
+.kg-embed-card{
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: center;
+    align-items: center;
+    /* margin: 1.5em 0 3em; */
+    min-width: 100%;
+    max-width: 100%;
+    
+}
+.kg-image-card figcaption,
+.kg-embed-card figcaption{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 87.5%;
+    margin-top: 0.5rem;
+}
+.kg-embed-card iframe{
+    /* flex-grow: 1; */
+    max-width: 100%;
+}
+pre{
+    width: 87.5%;
+    background: #f0f5fa;
+    padding: 1rem;
+}
+h5.post-full-authors{
+    font-size: 1.125rem;
+    margin-top: 1rem;
+    z-index: 5;
+}
+.post-full-card{
+    border: none!important;
+    margin-top: -17.5rem;
+}
+.post-full-card .card-footer{
+    margin-left:-15px;
+    margin-right:-15px;
+    padding: 1.25rem;
+    background: inherit;
+    /* background: #cbced1; */
+}
+/*Responsive Typography*/
+.post-full-content-container.card-body{
+    font-size: 1.125rem;
+}
+
+@media (min-width: 576px) {
+    .post-full-content-container.card-body{
+      padding: 1.6rem;
+      line-height: 2.4rem!important;
+      font-size: 1.2rem;
+      margin-top: -1.4rem;
+    }
+    h5.post-full-authors{
+        font-size: 1.2rem;
+        margin-top: 1.2rem;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .post-full-content-container.card-body{
+        padding: 2rem;
+        line-height: 2.6rem!important;
+        font-size: 1.3rem;
+        margin-top: -1.6rem;
+      }
+      h5.post-full-authors{
+        font-size: 1.3rem;
+        margin-top: 1.3rem;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .post-full-content-container.card-body{
+        padding-top: 2.8rem;
+        line-height: 2.8rem!important;
+        font-size: 1.4rem;
+        margin-top: -2.4rem;
+      }
+      h5.post-full-authors{
+        font-size: 1.4rem;
+        margin-top: 1.4rem;
+    }
+  }
+/*Byline*/
+
+.author-profile-image{
+    width:3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background: #ddd
+}
+
+.bio h5{
+    margin-bottom: 0.25rem;
+}
+
+/* Tag Card */
+.more-block{
+    margin-top: 1.25rem;
+}
+.read-next-card.post-card{
+    background-size: cover;
+    background-position: center;
+    background-color: #f0f5fa;
+}
+@media (max-width: 576px) {
+    .read-next-card.post-card{
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+}
+.read-next-card .list-group-item{
+    background: inherit;
+    border-left: none!important;
+    border-right: none!important;
+    border-top: 1px solid rgba(0,0,0,.125);
+}
+.read-next-card .list-group-item:first-child{
+    border-top: none;
+}
+.read-next-card .list-group-item:last-child{
+    border-bottom: none;
+}
+.read-next-card-header-title{
+    margin-top:0.55rem;
+}
+.read-next-card-header-title a{
+    text-transform: uppercase;
+    font-size: 1.75rem!important;
+}
+.read-next-card-header-title a:hover{
+    text-decoration: none;
+}
+.read-next{
+    padding-bottom: 1.25rem;
+}
+/* Floating-Footer*/
+.floating-footer{
+    background-color: #3d87d1;
+}
+.floating-footer-share{
+    height: 4rem;
+    padding-top: 1rem;
+}
+.share-this{
+    display: inline;
+    font-weight: 300;
+    color: #fff;
+}
+.floating-footer-share-tw svg,
+.floating-footer-share-fb svg{
+    width: 4rem;
+    height: 4rem;
+    padding: 0.375rem;
+    margin-top: -1rem;
+}
+
+.floating-footer-share-fb svg{
+    background: #3B5998;
+    fill: #fff;
+}
+
+.floating-footer-share-tw svg{
+    background: #1DA1F2;
+    fill: #fff;
+}
+/*Tag Page*/
+/* .tag-template{
+    background-color: #f0f5fa;
+} */
+/*author page*/
+.social-link{
+    text-align: center;
+    vertical-align: middle;
+}
+a.social-link:hover{
+    text-decoration: none;
+}
+.social-link svg{
+    width:1.2rem;
+    height: 1.2rem;
+    fill: #007bff;
+}
+.social-link svg path{
+    stroke: #007bff;
+}
+.author-meta div{
+    display: inline-block;
+    font-size:1.2rem;
+    text-transform: uppercase;
+}
+span.bull{
+    font-size: 1rem;
+}
+.author-profile-image.author-full{
+    width:15rem;
+    height:15rem;
+    margin-top: -7.5rem;
+    margin-bottom: 1rem;
+    background-size: cover!important;
+    background-position: center!important;
+}
+.author-feed{
+    background: #fff;
+    margin-top: 2.75rem;
+    padding-top: 1px;
+}
+#author-main{
+    padding-bottom: 0;
+}
+/*error pages*/
+p.error-description{
+    font-size: 2rem;
+}
+a.error-link{
+    font-size: 1.4rem;
+}
+
+/*Homepage specific*/
+/* .horizontal-container{
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+.horizontal-container .post-card{
+    display: inline-block;
+    white-space: initial;
+    height: 20rem;
+    vertical-align: top;
+} */
+#news-title{
+    display: inline-block;
+}
+
+.news-updates{
+    margin-top: -0.5rem;
+    margin-bottom: 1rem;
+}
+#home-feed {
+    margin-top: 1.5rem;
+}
+#home-main .news-updates{
+    margin-bottom: -0.5rem;
+}
+/*Mission block*/
+
+#mission-hero {
+    margin-top: 2rem;
+}
+#mission-hero h4{
+    padding-bottom: 2rem;
+}
+.mission-text {
+    font-size: 1.25rem;
+    line-height: 150%;
+}
+
+/*Team block*/
+
+#team-hero {
+    padding-top: 2rem;
+    background-color: #f0f5fa;
+    /* background-color: #fff; */
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.committee-card {
+    width: 18rem;
+    margin: auto;
+    margin-bottom: 2rem;
+}
+
+.committee-card .card-img-top{
+    height: 100%;
+    border-radius: 0;
+}
+.committee-card .card-body .card-title{
+    display: inline-block;
+}
+#team-hero h1{
+    margin-bottom: 0;
+    padding-bottom: 1.5rem;
+}
+
+/*Sponsor block*/
+
+#sponsor-hero {
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 0rem;
+}
+
+.logo-container {
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.logo-container img {
+    max-width: 90%;
+}
+
+#copyright-hero {
+    padding: 1rem;
+    /*This need to be changed when sponsors are added*/
+    margin-top: 0rem;
+    margin-bottom: 0;
+    background: #cbced1;
+}
+
+#copyright-hero h6 {
+    margin: 0;
+}
+
+
+/*Pagination*/
+.pagination{
+    /* margin-top: -1rem; */
+    font-size: 1.4rem;
+    font-weight: 300;
+    vertical-align: middle
+}
+.pagination a{
+    margin: 0.25rem;
+    margin-bottom: 0;
+    height: 1.5rem;
+}
+.author-feed .pagination{
+    margin-bottom: 1.25rem;
+}
+.pagination.total-1{
+    display: none!important;
+}

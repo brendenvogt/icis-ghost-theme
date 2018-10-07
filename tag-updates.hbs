@@ -1,0 +1,31 @@
+{{!< default}}
+{{!-- The tag above means - insert everything in this file into the {body} of the default.hbs template --}}
+
+{{!-- The big featured header, it uses blog cover image as a BG if available --}}
+{{#tag}}
+<header class="site-header outer">
+    <div class="inner">
+        <div class="site-header outer jumbotron jumbotron-fluid" {{#if feature_image}} style="background-image: url({{feature_image}})"{{else}}style="background-image: url({{@blog.cover_image}})"{{/if}}>
+    <div class="inner">
+        <div class="site-header-content">
+            <h1 class="site-title display-4 serif text-center text-light">
+                {{name}}
+            </h1>
+            <h2 class="site-description serif text-center text-light">Catch up with our society's news and events</h2>
+        </div>
+    </div>
+</div>
+{{/tag}}
+
+{{!-- The main content area --}}
+<main id="tag-main" class="site-main outer">
+    <div class="inner container">
+        <div class="post-feed row">
+            {{#foreach posts}}
+                {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
+                {{> "post-card"}}
+            {{/foreach}}
+        </div>
+        {{pagination}}
+    </div>
+</main>

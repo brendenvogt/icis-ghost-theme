@@ -1,0 +1,17 @@
+<nav class="pagination text-center row justify-content-center total-{{pages}}" role="navigation">
+    {{#if prev}}
+    <a class="newer-posts" href="{{page_url prev}}">
+        <i class="material-icons">
+            arrow_back_ios
+        </i>
+    </a>
+    {{/if}}
+    <span class="page-number">{{page}}</span>
+    {{#if next}}
+    <a class="older-posts" href="{{page_url next}}">
+        <i class="material-icons">
+            arrow_forward_ios
+        </i>
+    </a>
+    {{/if}}
+</nav>
