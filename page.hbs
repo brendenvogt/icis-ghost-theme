@@ -1,0 +1,49 @@
+{{!< default}}
+{{!-- The tag above means - insert everything in this file into the {body} of the default.hbs template --}}
+
+{{!-- The main content area --}}
+<main id="sponsor-main" class="site-main outer">
+    <div class="inner">
+        {{#post}}
+            {{!-- {{#if cover_image}}
+            <figure class="post-full-image" style="background-image: url({{cover_image}})">
+            </figure>
+            {{else}}
+            <figure class="post-full-image" style="background-image: url({{@blog.cover_image}})">
+            </figure>
+            {{/if}} --}}
+        <figure class="post-full-image" style="background-image: url({{@blog.cover_image}})">
+        </figure>
+        <div class="card post-full-card container">
+            <div class="card-header">
+                <div class="site-header-content row">
+                    <div class="profile-image-container col-12 col-md-3 offset-md-1">
+                        {{#if feature_image}}
+                            <img class="author-profile-image author-full" src="{{feature_image}}" alt="{{title}}" />
+                        {{else}}
+                            <div class="author-profile-image author-full">{{> "icons/avatar"}}</div>
+                        {{/if}}
+                    </div>
+                    <div class="sponsor-title-container col-12 col-md-8 align-middle">
+                        <div class="author-meta">
+                            <div class="author-stats text-primary">
+                                {{#primary_tag}}
+                                    <span class="text-primary">{{name}}</span>
+                                {{/primary_tag}}
+                                <span class="date-divider text-dark">/</span>
+                            </div>
+                            <br>
+                            <h1 class="post-full-title display-4 serif">{{title}}</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="post-full-content-container card-body col-lg-10 mr-auto ml-auto text-center">
+                <span class="post-full-content">
+                    {{content}}
+                </span>
+            </div>
+        </div>
+        {{/post}}
+    </div>
+</main>
