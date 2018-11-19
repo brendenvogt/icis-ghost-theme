@@ -33,13 +33,12 @@ into the {body} of the default.hbs template --}}
                 The Imperial College Investment Society (ICIS)
                 <small class="lead mission-text">
                     was founded in October 2015, with the aim of educating members on value investment techniques, and is growing exponentially
-                    year on year, with aims of reaching over 1500 members for 2018-19. We host interactive weekly investment
-                    meetings where our members have the chance to present, ask questions and vote on whether to add investment
-                    pitches to our virtual portfolio. By submersing themselves in the world’s financial news, jargon
-                    and investment theory our members develop vital commercial awareness and financial acumen; which
-                    is critical to making successful applications in a competitive world. We also offer a diverse range
-                    of career opportunities ranging from Private Equity to Asset Management through office visits and
-                    speaker sessions from industry professionals.
+                    year on year. We host interactive weekly investment meetings where our members have the chance to present, 
+					ask questions and vote on whether to add investment pitches to our virtual portfolio. By submersing 
+					themselves in the world’s financial news, jargon and investment theory our members develop vital 
+					commercial awareness and financial acumen; which is critical to making successful applications in 
+					a competitive world. We also offer a diverse range of career opportunities ranging from Private Equity 
+					to Asset Management through office visits and speaker sessions from industry professionals.
                 </small>
             </h4>
             <!--Insert signature block here, if needed-->
@@ -50,7 +49,7 @@ into the {body} of the default.hbs template --}}
 <main id="updates-main" class="site-main outer" style="background-image: url('assets/images/news-hero.jpg');">
     <div class="inner container">
         <h1 class="serif text-center news-updates text-dark">
-            Events &amp; Announcements
+            Announcements
             <a data-toggle="collapse" href="#update-feed">
                 <i class="material-icons">
                     unfold_more
@@ -113,8 +112,8 @@ into the {body} of the default.hbs template --}}
         </a>
     </h1>
     <div id="team-container" class="container collapse show">
-        <div class="row">
-            <div class="col-sm-6 col-lg-4 text-center" style="margin-left: auto; margin-right:auto;">
+        <div class="row justify-content-center">
+            <div class="col-sm-6 col-lg-4 text-center">
                 <div class="card committee-card">
                     <img class="card-img-top" src="./assets/images/committee/president.jpg" alt="President profile pic">
                     <div class="card-body">
@@ -130,8 +129,6 @@ into the {body} of the default.hbs template --}}
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="row">
             {{!-- <div class="col-sm-6 col-lg-4 text-center">
                 <div class="card committee-card">
                     <img class="card-img-top" src="./assets/images/committee/vicepresident.jpg" alt="Vice President profile pic">
@@ -148,6 +145,8 @@ into the {body} of the default.hbs template --}}
                     </div>
                 </div>
             </div> --}}
+        </div>
+        <div class="row">
             <div class="col-sm-6 col-lg-4 text-center">
                 <div class="card committee-card">
                     <img class="card-img-top" src="./assets/images/committee/treasurer.jpg" alt="Treasurer profile pic">
@@ -217,7 +216,7 @@ into the {body} of the default.hbs template --}}
                     <img class="card-img-top" src="./assets/images/committee/vpevents.jpg" alt="VP Events profile pic">
                     <div class="card-body">
                         <a class="text-dark" href="./author/vpevents">
-                            <h4 class="card-title serif">Jun Chai</h4>
+                            <h4 class="card-title serif">Sean Chai</h4>
                         </a>
                         <a class="linked-in-logo-container" href="https://www.linkedin.com/in/sean-chai-396433161/">
                             <img class="linked-in-logo" src="./assets/images/linkedin-logo-blue.svg" />
@@ -240,6 +239,22 @@ into the {body} of the default.hbs template --}}
                         </a>
                         <a class="text-dark" href="./author/vpsponsorship">
                             <h5 class="card-text serif">VP Marketing &amp; Sponsorship</h5>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 text-center">
+                <div class="card committee-card">
+                    <img class="card-img-top" src="./assets/images/committee/vpdiv.jpg" alt="VP Diversity profile pic">
+                    <div class="card-body">
+                        <a class="text-dark" href="./author/vpdiversity">
+                            <h4 class="card-title serif">David Tyoember</h4>
+                        </a>
+                        <a class="linked-in-logo-container" href="https://www.linkedin.com/in/tyoember/">
+                            <img class="linked-in-logo" src="./assets/images/linkedin-logo-blue.svg" />
+                        </a>
+                        <a class="text-dark" href="./author/editor">
+                            <h5 class="card-text serif">Vice President Diversity</h5>
                         </a>
                     </div>
                 </div>
@@ -277,34 +292,93 @@ into the {body} of the default.hbs template --}}
                 </div>
             </div>
         </div>
+    {{!-- Co-Editors --}}
+    <h1 class="serif text-center text-dark">
+        Contributors
+    </h1>
+    <div class="row">
+        <div class="col-sm-6 col-lg-4 text-center">
+            <div class="card committee-card">
+                    <img class="card-img-top" src="./assets/images/editor/jw.jpg" alt="Editor profile pic">
+                    <div class="card-body">
+                        {{!-- <a class="text-dark" href="./author/editor"> --}}
+                            <h4 class="card-title serif">Jieni Wang</h4>
+                        {{!-- </a> --}}
+                        {{!-- <a class="linked-in-logo-container" href="http://linkedin.com/in/tom-alston-458054153"> --}}
+                            {{!-- <img class="linked-in-logo" src="./assets/images/linkedin-logo-blue.svg" /> --}}
+                        {{!-- </a> --}}
+                        {{!-- <a class="text-dark" href="./author/editor"> --}}
+                            <h5 class="card-text serif">Editor</h5>
+                        {{!-- </a> --}}
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 text-center">
+                <div class="card committee-card">
+                    <img class="card-img-top" src="./assets/images/editor/karim.jpg" alt="Editor profile pic">
+                    <div class="card-body">
+                        {{!-- <a class="text-dark" href="./author/editor"> --}}
+                            <h4 class="card-title serif">Karim Farahat</h4>
+                        {{!-- </a> --}}
+                        {{!-- <a class="linked-in-logo-container" href="http://linkedin.com/in/tom-alston-458054153">
+                            <img class="linked-in-logo" src="./assets/images/linkedin-logo-blue.svg" />
+                        </a> --}}
+                        {{!-- <a class="text-dark" href="./author/editor"> --}}
+                            <h5 class="card-text serif">Editor</h5>
+                        {{!-- </a> --}}
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 text-center">
+                <div class="card committee-card">
+                    <img class="card-img-top" src="./assets/images/editor/xc.jpg" alt="Editor profile pic">
+                    <div class="card-body">
+                        {{!-- <a class="text-dark" href="./author/editor"> --}}
+                            <h4 class="card-title serif">Xerxes Chong</h4>
+                        {{!-- </a> --}}
+                        {{!-- <a class="linked-in-logo-container" href="http://linkedin.com/in/tom-alston-458054153">
+                            <img class="linked-in-logo" src="./assets/images/linkedin-logo-blue.svg" />
+                        </a> --}}
+                        {{!-- <a class="text-dark" href="./author/editor"> --}}
+                            <h5 class="card-text serif">Editor</h5>
+                        {{!-- </a> --}}
+                    </div>
+                </div>
+            </div>
+    </div>
     </div>
 </div>
 {{!-- Sponsor block --}}
 <div class="jumbotron jumbotron-fluid" id="sponsor-hero" style="background-image: url('assets/images/sponsor-hero.jpg');">
-    <h1 class="display-4 serif text-center text-light">More coming soon...</h1>
+    <h1 class="display-4 serif text-center text-light">Partners</h1>
 </div>
-<div class="container">
+<div class="container sponsor-container">
     <div class="row">
-        <div class="col-6 col-sm-4 col-md-3 logo-container">
-            <img src="./assets/images/sponsors/ft_logo_black.png" alt="Flow Traders">
+        <div class="col-6 col-sm-4 logo-container align-middle">
+            <a href="http://www.investmentsoc.com/partner-flow-traders/">
+                <img src="./assets/images/sponsors/ft.png" alt="Flow Traders">
+            </a>
         </div>
-        <div class="col-6 col-sm-4 col-md-3 logo-container">
-            <img src="./assets/images/sponsors/freshminds.svg" alt="Test logo">
+        <div class="col-6 col-sm-4 logo-container align-middle">
+            <a href="http://www.investmentsoc.com/partner-fresh-minds/">
+                <img src="./assets/images/sponsors/freshmindslogo.svg" alt="Freshminds">
+            </a>
         </div>
-        {{!-- <div class="col-6 col-sm-4 col-md-3 logo-container">
-            <img src="./assets/images/sponsors/test.png" alt="Test logo">
+        <div class="col-6 col-sm-4 logo-container align-middle">
+            <a href="http://www.investmentsoc.com/partner-gleacher-shacklock/">
+                <img src="./assets/images/sponsors/gleachershacklock.png" alt="Gleacher Shacklock">
+            </a>
         </div>
-        <div class="col-6 col-sm-4 col-md-3 logo-container">
-            <img src="./assets/images/sponsors/test.png" alt="Test logo">
+        {{!-- offsetting logo height --}}
+        <div class="col-6 col-sm-4 logo-container align-middle"> 
+            <a href="http://www.investmentsoc.com/partner-campus-capital/">
+                <img src="./assets/images/sponsors/campuscapital.png" alt="Campus Capital">
+            </a>
         </div>
-        <div class="col-6 col-sm-4 col-md-3 logo-container">
-            <img src="./assets/images/sponsors/test.png" alt="Test logo">
+        <div class="col-6 col-sm-4 logo-container align-middle" style="padding-bottom: 0.75rem">
+            <a href="http://www.investmentsoc.com/partner-DE-Shaw/">
+                <img src="./assets/images/sponsors/deshaw.svg" alt="D.E. Shaw">
+            </a>
         </div>
-        <div class="col-6 col-sm-4 col-md-3 logo-container">
-            <img src="./assets/images/sponsors/test.png" alt="Test logo">
-        </div>
-        <div class="col-6 col-sm-4 col-md-3 logo-container">
-            <img src="./assets/images/sponsors/test.png" alt="Test logo">
-        </div> --}}
     </div>
 </div>
