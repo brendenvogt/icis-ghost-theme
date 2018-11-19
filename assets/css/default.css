@@ -29,14 +29,9 @@ body {
 }
 
 /*Navbar CSS*/
-.nav-bg{
-    background: #fff;
-}
 
 .navbar {
     background: #fff;
-    max-width: 1140px;
-    margin: auto;
 }
 
 .caption-nav {
@@ -225,15 +220,10 @@ article.post-full{
     align-items: center;
     -ms-flex-direction: column;
     -ms-flex-align: center;
-    text-align: left;
 }
 .post-full-content p,
-.post-full-content img,
-.post-full-content ul{
-    width: 100%;
-}
 .post-full-content img{
-    margin: 1rem 0;
+    width: 100%;
 }
 .post-full-content .kg-width-full img{
     width: 100vw;
@@ -517,20 +507,14 @@ a.error-link{
     margin-bottom: 0;
 }
 
-.card.committee-card {
+.committee-card {
     width: 18rem;
     margin: auto;
     margin-bottom: 2rem;
-    padding-top: 1.25rem;
-    border: none;
-    /* border-radius: 0.5rem; */
 }
 
 .committee-card .card-img-top{
-    max-width: 200px;
-    margin: auto;
     height: 100%;
-    border-radius: 50%;
 }
 .committee-card .card-body .card-title{
     display: inline-block;
@@ -545,20 +529,16 @@ a.error-link{
 #sponsor-hero {
     background-repeat: no-repeat;
     background-size: cover;
-    margin-bottom: 2rem;
+    margin-bottom: 0rem;
 }
 
 .logo-container {
-    margin: auto;
+    margin-top: 4rem;
     text-align: center;
-    vertical-align: middle;
 }
 
 .logo-container img {
-    max-width: 200px;
-}
-.sponsor-container {
-    margin-bottom: 2rem;
+    max-width: 90%;
 }
 
 #copyright-hero {
@@ -573,47 +553,6 @@ a.error-link{
     margin: 0;
 }
 
-/*Sponsor page formats*/
-#sponsor-main{
-    padding-top: 0;
-}
-#sponsor-main .post-full-title{
-    font-size: 4rem!important;
-}
-#sponsor-main .card-header{
-    background: #fff;
-    padding: 2rem;
-    padding-bottom: 1.25rem;
-}
-#sponsor-main .post-full-card{
-    margin-top: -25rem;
-    border-radius: 0;
-}
-#sponsor-main .author-meta{
-    /* display: inline-block; */
-    margin-bottom: 0;
-    /* margin-left: 2rem; */
-}
-#sponsor-main .post-full-title{
-    margin-bottom: 0;
-}
-#sponsor-main .sponsor-title-container{
-    padding-top: 6.25%;
-}
-#sponsor-main .profile-image-container{
-    max-height: 100%;
-    background: #fff;
-    /* border: 1px solid #000; */
-    /* margin-top: -7.5rem; */
-    /* margin-bottom: 1rem; */
-    display: inline-block;
-}
-#sponsor-main .author-profile-image{
-    border-radius: 0;
-    margin-top: 0;
-    height: inherit;
-    width: inherit;
-}
 
 /*Pagination*/
 .pagination{
