@@ -45,6 +45,36 @@ into the {body} of the default.hbs template --}}
         </div>
     </div>
 </div>
+{{!-- Events block --}}
+<main id="events-main" class="site-main outer" style="background-image: url('assets/images/event-hero.jpg');">
+    <div class="inner container">
+        <h1 class="serif text-center news-updates text-dark">
+            What's On
+            <a data-toggle="collapse" href="#events-feed">
+                <i class="material-icons">
+                    unfold_more
+                </i>
+            </a>
+        </h1>
+        <div id="events-feed" class="post-feed row collapse show justify-content-center">
+            {{#get "posts" include="tags" filter="primary_tag: ['event']" limit="3"}}
+                {{#foreach posts}}
+                    {{> "post-card"}}
+                {{/foreach}}  
+            {{/get}}
+        </div>
+        <div class="news-next-container container row justify-content-center">
+            <a class="older-posts" href="./tag/event">
+                <span>
+                    More Events
+                </span>
+                <i class="material-icons align-middle">
+                    arrow_forward_ios
+                </i>
+            </a>
+        </div>
+    </div>
+</main>
 {{!-- Newsletter block --}}
 <main id="updates-main" class="site-main outer" style="background-image: url('assets/images/news-hero.jpg');">
     <div class="inner container">
@@ -58,7 +88,7 @@ into the {body} of the default.hbs template --}}
         </h1>
         <div id="update-feed" class="post-feed row collapse show">
             {{!-- replace "updates" for the Primary tag assigned for newsletters --}}
-            {{#get "posts" include="tags" filter="primary_tag: ['event','updates']" limit="3"}}
+            {{#get "posts" include="tags" filter="primary_tag: ['updates']" limit="3"}}
                 {{#foreach posts}}
                     {{> "post-card"}}
                 {{/foreach}}  
@@ -88,7 +118,7 @@ into the {body} of the default.hbs template --}}
             </a>
         </h1>
         {{!-- get filtered posts of the current page --}}
-        {{#get "posts" limit=@config.posts_per_page page=pagination.page filter="tags: -['event','updates']" include="tags"}}
+        {{#get "posts" limit=@config.posts_per_page page=pagination.page filter="tags: -['event','updates','partner','sponsor']" include="tags"}}
         <div id="home-feed" class="post-feed row collapse show">
             {{!-- {{#foreach posts}}
                     {{> "post-card"}}

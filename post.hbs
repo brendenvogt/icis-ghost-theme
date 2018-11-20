@@ -5,96 +5,141 @@ into the {body} of the default.hbs template --}}
 
 {{!-- Everything inside the #post tags pulls data from the post --}}
 {{#post}}
-
-<main id="post-main" class="site-main outer">
-    <header class="post-full-header text-center">
-        <section class="post-full-meta">
-            <time class="post-full-meta-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMMM YYYY"}}</time>
-            {{#primary_tag}}
-                <span class="date-divider">/</span> <a class="text-danger" href="{{url}}">{{name}}</a>
-            {{/primary_tag}}
-        </section>
-        <h1 class="post-full-title serif">{{title}}</h1>
-    </header>
-    {{#if feature_image}}
-    <figure class="post-full-image" style="background-image: url({{feature_image}})">
-    </figure>
-    {{else}}
-    <figure class="post-full-image" style="background-image: url({{@blog.cover_image}})">
-    </figure>
-    {{/if}}
-    <div class="inner container no-padding">
-        <article class="post-full col mr-auto ml-auto {{post_class}} {{#unless feature_image}}no-image{{/unless}}">
-            <div class="card post-full-card container">
-                <h5 class="text-center display-4 post-full-authors">By {{authors}}</h5>
-                <div class="post-full-content-container card-body col-lg-10 mr-auto ml-auto">
-                    <span class="post-full-content">{{content}}</span>
-                </div>
-                <div class="card-footer">
-                    {{> "byline-multiple"}}
-                </div>
-            </div>
-
-            {{!--
-            <section class="post-full-comments">
-                If you want to embed comments, this is a good place to do it!
+{{!-- featured posts means they are either events or sponsors --}}
+{{#unless featured}}
+    <main id="post-main" class="site-main outer">
+        <header class="post-full-header text-center">
+            <section class="post-full-meta">
+                <time class="post-full-meta-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMMM YYYY"}}</time>
+                {{#primary_tag}}
+                    <span class="date-divider">/</span> <a class="text-danger" href="{{url}}">{{name}}</a>
+                {{/primary_tag}}
             </section>
-            --}}
+            <h1 class="post-full-title serif">{{title}}</h1>
+        </header>
+        {{#if feature_image}}
+        <figure class="post-full-image" style="background-image: url({{feature_image}})">
+        </figure>
+        {{else}}
+        <figure class="post-full-image" style="background-image: url({{@blog.cover_image}})">
+        </figure>
+        {{/if}}
+        <div class="inner container no-padding">
+            <article class="post-full col mr-auto ml-auto {{post_class}} {{#unless feature_image}}no-image{{/unless}}">
+                <div class="card post-full-card container">
+                    <h5 class="text-center display-4 post-full-authors">By {{authors}}</h5>
+                    <div class="post-full-content-container card-body col-lg-10 mr-auto ml-auto">
+                        <span class="post-full-content">{{content}}</span>
+                    </div>
+                    <div class="card-footer">
+                        {{> "byline-multiple"}}
+                    </div>
+                </div>
 
-        </article>
+                {{!--
+                <section class="post-full-comments">
+                    If you want to embed comments, this is a good place to do it!
+                </section>
+                --}}
 
-    </div>
-</main>
+            </article>
 
-{{!-- Links to Previous/Next posts --}}
-<aside class="read-next outer">
-    <h1 class="serif text-center more-block">More</h1>
-    <div class="inner container">
-        <div class="read-next-feed row">
-            {{#if primary_tag}}
-            {{#get "posts" filter="tags:{{primary_tag.slug}}+id:-{{id}}" limit="3" as |related_posts|}}
-                {{#if related_posts}}
-                <div class="read-next-card card post-card text-center col-sm-6 col-md-4">
-                    <header class="read-next-card-header">
-                        {{#../primary_tag}}
-                        <h3 class="read-next-card-header-title"><a class="text-danger display-4" href="{{url}}">{{name}}</a></h3>
-                        {{/../primary_tag}}
-                    </header>
-                    <img class="card-img-top" {{#if ../primary_tag.feature_image}}
-                        style="background-image: url({{../primary_tag.feature_image}})"
-                    {{else}}
-                        {{#if @blog.cover_image}}
-                            style="background-image: url({{@blog.cover_image}})"{{/if}}
-                    {{/if}}></img>
-                    <div class="read-next-card-content">
-                        <div class="list-group">
-                            {{#foreach related_posts}}
-                            <a class="list-group-item list-group-item-action text-dark" href="{{url}}">{{title}}</a>
-                            {{/foreach}}
+        </div>
+    </main>
+
+    {{!-- Links to Previous/Next posts --}}
+    <aside class="read-next outer">
+        <h1 class="serif text-center more-block">More</h1>
+        <div class="inner container">
+            <div class="read-next-feed row">
+                {{#if primary_tag}}
+                {{#get "posts" filter="tags:{{primary_tag.slug}}+id:-{{id}}" limit="3" as |related_posts|}}
+                    {{#if related_posts}}
+                    <div class="read-next-card card post-card text-center col-sm-6 col-md-4">
+                        <header class="read-next-card-header">
+                            {{#../primary_tag}}
+                            <h3 class="read-next-card-header-title"><a class="text-danger display-4" href="{{url}}">{{name}}</a></h3>
+                            {{/../primary_tag}}
+                        </header>
+                        <img class="card-img-top" {{#if ../primary_tag.feature_image}}
+                            style="background-image: url({{../primary_tag.feature_image}})"
+                        {{else}}
+                            {{#if @blog.cover_image}}
+                                style="background-image: url({{@blog.cover_image}})"{{/if}}
+                        {{/if}}></img>
+                        <div class="read-next-card-content">
+                            <div class="list-group">
+                                {{#foreach related_posts}}
+                                <a class="list-group-item list-group-item-action text-dark" href="{{url}}">{{title}}</a>
+                                {{/foreach}}
+                            </div>
+                        </div>
+                    </div>
+                    {{/if}}
+                {{/get}}
+                {{/if}}
+
+                {{!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs --}}
+                {{#next_post}}
+                    {{> "post-card"}}
+                {{/next_post}}
+
+                {{!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs --}}
+                {{#prev_post}}
+                    {{> "post-card"}}
+                {{/prev_post}}
+
+            </div>
+        </div>
+    </aside>
+    {{!-- Floating header which appears on-scroll, included from includes/floating-header.hbs --}}
+    {{> floating-header}}
+{{/unless}}
+    {{#if featured}}
+    <main id="page-main" class="site-main outer">
+        <div class="inner">
+                {{!-- {{#if cover_image}}
+                <figure class="post-full-image" style="background-image: url({{cover_image}})">
+                </figure>
+                {{else}}
+                <figure class="post-full-image" style="background-image: url({{@blog.cover_image}})">
+                </figure>
+                {{/if}} --}}
+            <figure class="post-full-image" style="background-image: url({{@blog.cover_image}})">
+            </figure>
+            <div class="card post-full-card container">
+                <div class="card-header">
+                    <div class="site-header-content row">
+                        <div class="profile-image-container col-12 col-md-3 offset-md-1">
+                            {{#if feature_image}}
+                                <img class="author-profile-image author-full" src="{{feature_image}}" alt="{{title}}" />
+                            {{else}}
+                                <div class="author-profile-image author-full">{{> "icons/avatar"}}</div>
+                            {{/if}}
+                        </div>
+                        <div class="sponsor-title-container col-12 col-md-8 align-middle">
+                            <div class="author-meta">
+                                <div class="author-stats text-primary">
+                                    {{#primary_tag}}
+                                        <span class="text-primary">{{name}}</span>
+                                    {{/primary_tag}}
+                                    <span class="date-divider text-dark">/</span>
+                                </div>
+                                <br>
+                                <h1 class="post-full-title display-4 serif">{{title}}</h1>
+                            </div>
                         </div>
                     </div>
                 </div>
-                {{/if}}
-            {{/get}}
-            {{/if}}
-
-            {{!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs --}}
-            {{#next_post}}
-                {{> "post-card"}}
-            {{/next_post}}
-
-            {{!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs --}}
-            {{#prev_post}}
-                {{> "post-card"}}
-            {{/prev_post}}
-
+                <div class="post-full-content-container card-body col-lg-10 mr-auto ml-auto text-center">
+                    <span class="post-full-content">
+                        {{content}}
+                    </span>
+                </div>
+            </div>
         </div>
-    </div>
-</aside>
-
-{{!-- Floating header which appears on-scroll, included from includes/floating-header.hbs --}}
-{{> floating-header}}
-
+    </main>
+    {{/if}}
 {{/post}}
 
 {{!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs --}}

@@ -129,7 +129,7 @@ footer.site-footer {
 .card-body.post-card-content{
     padding: 0.75rem 0;
 }
-.card-img-top{
+.card-img-top, .card-img-bottom{
     height:180px;
     border:none;
     background-size: cover;
@@ -147,13 +147,35 @@ footer.site-footer {
 .post-card-excerpt{
     margin-top: -0.125rem;
 }
+/* Events block*/
+#events-main{
+    background-size: cover;
+}
+.event-card.post-card{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.event-card .card-img-bottom{
+    margin-top: -0.75rem;
+    height: 140px;
+}
+.event-card .card-title{
+    /* border-bottom: 1px solid rgba(0,0,0,.125); */
+}
+.event-card .card-title{
+    margin-bottom: 0.25rem;
+}
+.event-card .post-card-excerpt{
+    margin-top: 0.5rem;
+}
 /* Updates block*/
-#updates-main{
+#updates-main, #events-main{
     /* background-size: cover; */
     background-position-x: center;
     padding-bottom: 1rem;
 }
-#update-feed{
+#update-feed, 
+#events-feed{
     background: #fff;
     border-radius: 0;
     /* on its own, the feed looks better with margins, but the comparison with the article block is eyesoring */
@@ -574,33 +596,33 @@ a.error-link{
 }
 
 /*Sponsor page formats*/
-#sponsor-main{
+#page-main{
     padding-top: 0;
 }
-#sponsor-main .post-full-title{
+#page-main .post-full-title{
     font-size: 4rem!important;
 }
-#sponsor-main .card-header{
+#page-main .card-header{
     background: #fff;
     padding: 2rem;
     padding-bottom: 1.25rem;
 }
-#sponsor-main .post-full-card{
+#page-main .post-full-card{
     margin-top: -25rem;
     border-radius: 0;
 }
-#sponsor-main .author-meta{
+#page-main .author-meta{
     /* display: inline-block; */
     margin-bottom: 0;
     /* margin-left: 2rem; */
 }
-#sponsor-main .post-full-title{
+#page-main .post-full-title{
     margin-bottom: 0;
 }
-#sponsor-main .sponsor-title-container{
+#page-main .sponsor-title-container{
     padding-top: 6.25%;
 }
-#sponsor-main .profile-image-container{
+#page-main .profile-image-container{
     max-height: 100%;
     background: #fff;
     /* border: 1px solid #000; */
@@ -608,7 +630,7 @@ a.error-link{
     /* margin-bottom: 1rem; */
     display: inline-block;
 }
-#sponsor-main .author-profile-image{
+#page-main .author-profile-image{
     border-radius: 0;
     margin-top: 0;
     height: inherit;
