@@ -106,6 +106,68 @@ into the {body} of the default.hbs template --}}
         </div>
     </div>
 </main>
+{{!-- Market block --}}
+<main id="mp-updates-main" class="site-main outer" style="background-image: url('assets/images/market-hero.jpg'); background-size: cover;">
+    <div class="inner container">
+        <h1 class="serif text-center news-updates text-white">
+            Market and Portfolio Updates
+            <a data-toggle="collapse" href="#update-feed">
+                <i class="material-icons">
+                    unfold_more
+                </i>
+            </a>
+        </h1>
+        <div id="update-feed" class="post-feed row collapse show">
+            {{!-- replace "updates" for the Primary tag assigned for newsletters --}}
+            {{#get "posts" include="tags" filter="primary_tag: ['mp-updates']" limit="3"}}
+                {{#foreach posts}}
+                    {{> "post-card"}}
+                {{/foreach}}  
+            {{/get}}
+        </div>
+        <div class="news-next-container container row justify-content-center">
+            <a class="older-posts" href="./tag/updates">
+                <span>
+                    More Updates
+                </span>
+                <i class="material-icons align-middle">
+                    arrow_forward_ios
+                </i>
+            </a>
+        </div>
+    </div>
+</main>
+{{!-- Market block --}}
+<main id="mp-updates-main" class="site-main outer" style="background-image: url('assets/images/advice-hero.jpg'); background-size: cover; display: none;">
+    <div class="inner container">
+        <h1 class="serif text-center news-updates text-dark">
+            Application Advice
+            <a data-toggle="collapse" href="#update-feed">
+                <i class="material-icons">
+                    unfold_more
+                </i>
+            </a>
+        </h1>
+        <div id="update-feed" class="post-feed row collapse show">
+            {{!-- replace "updates" for the Primary tag assigned for newsletters --}}
+            {{#get "posts" include="tags" filter="primary_tag: ['app-advice']" limit="3"}}
+                {{#foreach posts}}
+                    {{> "post-card"}}
+                {{/foreach}}  
+            {{/get}}
+        </div>
+        <div class="news-next-container container row justify-content-center">
+            <a class="older-posts" href="./tag/updates">
+                <span>
+                    More Advice
+                </span>
+                <i class="material-icons align-middle">
+                    arrow_forward_ios
+                </i>
+            </a>
+        </div>
+    </div>
+</main>
 {{!-- The main content area --}}
 <main id="home-main" class="site-main outer">
     <div class="inner container">
@@ -378,6 +440,25 @@ into the {body} of the default.hbs template --}}
     </div>
     </div>
 </div>
+{{!-- Gallery Block --}}
+{{!-- <script src="https://cdn.jsdelivr.net/npm/publicalbum@latest/embed-ui.min.js" async></script>
+<div class="container justify-content-center" id="gallery-hero">
+    <h1 class="display-4 serif text-center text-dark" style="margin-top: 1.5rem;">Gallery</h1>
+    <div class="pa-carousel-widget" style="width:640px; height:480px; display:none; margin: auto"
+    data-link="https://photos.google.com/share/AF1QipNhpgz5rmuv_9IamWF_oqxsiGQ76z08HeLVcyXMkuuYb7UignvS9VC9V8AymnyDzg?hl=zh-CN&key=dXBQSU8zTWhOT0htRURBUUJXZ0pYU3lHSzRVRFZR"
+    data-title=" "
+    data-description="Gallery"
+    data-background-color="#ffffff">
+    <img data-src="https://lh3.googleusercontent.com/ODMdPmfn_nIhvrHyZcjCcgPHqwOZHOZ2hnXp2xY5IsJAngTrt_QDDAo5kY3qADKJUmZ8YwCpA01LPPZTdS7qySgzGosIF2RC8OO0FpR7kRPYKNJGO_UIeyIUf8ZrddFGyP5eJoVJpgI=w1920-h1080" src="" alt="" />
+    <img data-src="https://lh3.googleusercontent.com/C__ABHTg6_92mvHKMmH-dBkAzA5AzeEW3QnGpqff7zTD58iT3c9prnOENg6WsseKjBHTaKZln7nD9Rw5ayem_2KWLXAGNvddml666ln-mWaFaB-E80wpqzqOGKGLly5mrrb68L41Gu0=w1920-h1080" src="" alt="" />
+    <img data-src="https://lh3.googleusercontent.com/DnRJ5eaLw9qxTJ-aLGjq5Dh1P1PBVb8nKFuti8-hPYxR5ZcKWLS3EDLu1wi_k4UNLtZHN7NSDwgiV_OkIl-8j0oOewzTLVBxPwSARQykJmAtzGrQ7NP2Qq20ptD7p0z-Z4ok3aatPow=w1920-h1080" src="" alt="" />
+    <img data-src="https://lh3.googleusercontent.com/oVdoQK9vDMqxMjEzwc6qjbfxC9RMHeqfpG6CDBHBlDxOLv7L-jcaJ7jupsMxyDCUwRCVGB2mb4hlMkr1kyIF5cXuBsy7FbDFZUDwJWiOWwrQ7DRzliadwh90kedOB4MrAMgoaZdYzoE=w1920-h1080" src="" alt="" />
+    <img data-src="https://lh3.googleusercontent.com/rYm_sf5JRPa0rSeUotWvTcwpPz-ipDIM6pCqqMlLRCuMVsf7MpYR9oNG6okex6apoCdBOG6t8NtDkXeZMwuW2IYQfatVGvU5aC53EtXNfmqwq9R9AJDqPKJn4dEcpsTfcxRHJvladpw=w1920-h1080" src="" alt="" />
+    </div>
+</div> --}}
+
+
+
 {{!-- Sponsor block --}}
 <div class="jumbotron jumbotron-fluid" id="sponsor-hero" style="background-image: url('assets/images/sponsor-hero.jpg');">
     <h1 class="display-4 serif text-center text-light">Partners</h1>
