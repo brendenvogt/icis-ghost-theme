@@ -169,13 +169,15 @@ footer.site-footer {
     margin-top: 0.5rem;
 }
 /* Updates block*/
-#advice-main, #mp-updates-main, #updates-main, #events-main{
+#advice-main, #mp-updates-main, #updates-main, #events-main, #edu-app-main{
     /* background-size: cover; */
     background-position-x: center;
     padding-bottom: 1rem;
 }
 #update-feed, 
-#events-feed{
+#events-feed,
+#mp-update-feed,
+#edu-app-feed{
     background: #fff;
     border-radius: 0;
     /* on its own, the feed looks better with margins, but the comparison with the article block is eyesoring */
