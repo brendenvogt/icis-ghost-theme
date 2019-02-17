@@ -2,7 +2,7 @@
     "name": "trading-floor",
     "description": "Imperial College Investment Society",
     "demo": "https://demo.ghost.io",
-    "version": "0.0.6",
+    "version": "0.0.7",
     "engines": {
         "ghost": ">=1.2.0"
     },

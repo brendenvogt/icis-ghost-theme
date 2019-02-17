@@ -111,13 +111,13 @@ into the {body} of the default.hbs template --}}
     <div class="inner container">
         <h1 class="serif text-center news-updates text-white">
             Market and Portfolio Updates
-            <a data-toggle="collapse" href="#update-feed">
+            <a data-toggle="collapse" href="#mp-update-feed">
                 <i class="material-icons">
                     unfold_more
                 </i>
             </a>
         </h1>
-        <div id="update-feed" class="post-feed row collapse show">
+        <div id="mp-update-feed" class="post-feed row collapse show">
             {{!-- replace "updates" for the Primary tag assigned for newsletters --}}
             {{#get "posts" include="tags" filter="primary_tag: ['mp-updates']" limit="3"}}
                 {{#foreach posts}}
@@ -126,7 +126,7 @@ into the {body} of the default.hbs template --}}
             {{/get}}
         </div>
         <div class="news-next-container container row justify-content-center">
-            <a class="older-posts" href="./tag/updates">
+            <a class="older-posts" href="./tag/mp-updates">
                 <span>
                     More Updates
                 </span>
@@ -141,23 +141,23 @@ into the {body} of the default.hbs template --}}
 <main id="advice-main" class="site-main outer" style="background-image: url('assets/images/advice-hero.jpg'); background-size: cover; display: none;">
     <div class="inner container">
         <h1 class="serif text-center news-updates text-dark">
-            Application Advice
-            <a data-toggle="collapse" href="#update-feed">
+            Educational and Application Advice
+            <a data-toggle="collapse" href="#edu-app-feed">
                 <i class="material-icons">
                     unfold_more
                 </i>
             </a>
         </h1>
-        <div id="update-feed" class="post-feed row collapse show">
+        <div id="aedu-app-feed" class="post-feed row collapse show">
             {{!-- replace "updates" for the Primary tag assigned for newsletters --}}
-            {{#get "posts" include="tags" filter="primary_tag: ['app-advice']" limit="3"}}
+            {{#get "posts" include="tags" filter="primary_tag: ['edu-app']" limit="3"}}
                 {{#foreach posts}}
                     {{> "post-card"}}
                 {{/foreach}}  
             {{/get}}
         </div>
         <div class="news-next-container container row justify-content-center">
-            <a class="older-posts" href="./tag/updates">
+            <a class="older-posts" href="./tag/edu-app">
                 <span>
                     More Advice
                 </span>
@@ -384,60 +384,17 @@ into the {body} of the default.hbs template --}}
                 </div>
             </div>
         </div>
-    {{!-- Co-Editors --}}
-    <h1 class="serif text-center text-dark">
-        Contributors
-    </h1>
-    <div class="row">
-        <div class="col-sm-6 col-lg-4 text-center">
-            <div class="card committee-card">
-                    <img class="card-img-top" src="./assets/images/editor/jw.jpg" alt="Editor profile pic">
-                    <div class="card-body">
-                        {{!-- <a class="text-dark" href="./author/editor"> --}}
-                            <h4 class="card-title serif">Jieni Wang</h4>
-                        {{!-- </a> --}}
-                        {{!-- <a class="linked-in-logo-container" href="http://linkedin.com/in/tom-alston-458054153"> --}}
-                            {{!-- <img class="linked-in-logo" src="./assets/images/linkedin-logo-blue.svg" /> --}}
-                        {{!-- </a> --}}
-                        {{!-- <a class="text-dark" href="./author/editor"> --}}
-                            <h5 class="card-text serif">Editor</h5>
-                        {{!-- </a> --}}
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-lg-4 text-center">
-                <div class="card committee-card">
-                    <img class="card-img-top" src="./assets/images/editor/karim.jpg" alt="Editor profile pic">
-                    <div class="card-body">
-                        {{!-- <a class="text-dark" href="./author/editor"> --}}
-                            <h4 class="card-title serif">Karim Farahat</h4>
-                        {{!-- </a> --}}
-                        {{!-- <a class="linked-in-logo-container" href="http://linkedin.com/in/tom-alston-458054153">
-                            <img class="linked-in-logo" src="./assets/images/linkedin-logo-blue.svg" />
-                        </a> --}}
-                        {{!-- <a class="text-dark" href="./author/editor"> --}}
-                            <h5 class="card-text serif">Editor</h5>
-                        {{!-- </a> --}}
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-lg-4 text-center">
-                <div class="card committee-card">
-                    <img class="card-img-top" src="./assets/images/editor/xc.jpg" alt="Editor profile pic">
-                    <div class="card-body">
-                        {{!-- <a class="text-dark" href="./author/editor"> --}}
-                            <h4 class="card-title serif">Xerxes Chong</h4>
-                        {{!-- </a> --}}
-                        {{!-- <a class="linked-in-logo-container" href="http://linkedin.com/in/tom-alston-458054153">
-                            <img class="linked-in-logo" src="./assets/images/linkedin-logo-blue.svg" />
-                        </a> --}}
-                        {{!-- <a class="text-dark" href="./author/editor"> --}}
-                            <h5 class="card-text serif">Editor</h5>
-                        {{!-- </a> --}}
-                    </div>
-                </div>
-            </div>
-    </div>
+    {{!-- More Team button --}}
+        <div class="news-next-container container row justify-content-center">
+            <a class="older-posts" href="./team"  style="margin-bottom: 2rem;">
+                <span>
+                    More about us
+                </span>
+                <i class="material-icons align-middle">
+                    arrow_forward_ios
+                </i>
+            </a>
+        </div>
     </div>
 </div>
 {{!-- Gallery Block --}}
