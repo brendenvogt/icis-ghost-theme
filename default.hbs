@@ -66,6 +66,17 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
         crossorigin="anonymous">
         </script>
+    <script>
+       //home page script
+       $('#com-incoming').click(function(){
+           $('#team-container').toggleClass('d-none');
+           $('#18-team-container').toggleClass('d-none');
+       });
+       $('#com-2018').click(function(){
+           $('#team-container').toggleClass('d-none');
+           $('#18-team-container').toggleClass('d-none');
+       });
+    </script>
     {{{block "scripts"}}} {{!-- Ghost outputs important scripts and data with this tag - it should always be the very
     last thing before the closing body tag --}} {{ghost_foot}}
 

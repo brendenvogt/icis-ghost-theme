@@ -552,6 +552,7 @@ a.error-link{
 
 .committee-card .card-img-top{
     max-width: 200px;
+    max-height: 200px;
     margin: auto;
     height: 100%;
     border-radius: 50%;

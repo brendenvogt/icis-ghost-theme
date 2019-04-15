@@ -203,11 +203,37 @@ into the {body} of the default.hbs template --}}
             </i>
         </a>
     </h1>
+    <div class="row justify-content-center" style="padding-bottom: 2rem;">
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+        <label class="btn btn-primary active" id="com-incoming" style="border-radius: 0;">
+            <input type="radio" name="options" autocomplete="off" checked> Incoming
+        </label>
+        <label class="btn btn-primary" id="com-2018" style="border-radius: 0;">
+            <input type="radio" name="options" autocomplete="off"> 2018-2019
+        </label>
+        </div>
+    </div>
     <div id="team-container" class="container collapse show">
         <div class="row justify-content-center">
             <div class="col-sm-6 col-lg-4 text-center">
                 <div class="card committee-card">
                     <img class="card-img-top" src="./assets/images/committee/president.jpg" alt="President profile pic">
+                    <div class="card-body">
+                        <a class="text-dark" href="./author/vpdiversity">
+                            <h4 class="card-title serif">David Tyoember</h4>
+                        </a>
+                        <a class="linked-in-logo-container" href="https://www.linkedin.com/in/tyoember/">
+                            <img class="linked-in-logo" src="./assets/images/linkedin-logo-blue.svg" />
+                        </a>
+                        <a class="text-dark" href="./author/vpdiversity">
+                            <h5 class="card-text serif">President</h5>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 text-center">
+                <div class="card committee-card">
+                    <img class="card-img-top" src="./assets/images/committee/chairman.jpg" alt="Chairman profile pic">
                     <div class="card-body">
                         <a class="text-dark" href="./author/president">
                             <h4 class="card-title serif">Joe Arrowsmith</h4>
@@ -216,14 +242,14 @@ into the {body} of the default.hbs template --}}
                             <img class="linked-in-logo" src="./assets/images/linkedin-logo-blue.svg" />
                         </a>
                         <a class="text-dark" href="./author/president">
-                            <h5 class="card-text serif">President</h5>
+                            <h5 class="card-text serif">Chairman</h5>
                         </a>
                     </div>
                 </div>
             </div>
             {{!-- <div class="col-sm-6 col-lg-4 text-center">
                 <div class="card committee-card">
-                    <img class="card-img-top" src="./assets/images/committee/vicepresident.jpg" alt="Vice President profile pic">
+                    <img class="card-img-top" src="./assets/images/committee-2018/vicepresident.jpg" alt="Vice President profile pic">
                     <div class="card-body">
                         <a class="text-dark" href="./author/vice-president">
                             <h4 class="card-title serif">Samuel Martin Frias</h4>
@@ -241,15 +267,47 @@ into the {body} of the default.hbs template --}}
         <div class="row">
             <div class="col-sm-6 col-lg-4 text-center">
                 <div class="card committee-card">
-                    <img class="card-img-top" src="./assets/images/committee/treasurer.jpg" alt="Treasurer profile pic">
+                    <img class="card-img-top" src="./assets/images/committee/hbuyside.jpg" alt="Head of Buy-side profile pic">
                     <div class="card-body">
-                        <a class="text-dark" href="./author/treasurer">
-                            <h5 class="card-title serif">Pierre Moutounet-Cartan</h5>
+                        <a class="text-dark" href="#">
+                            <h4 class="card-title serif">Rohhil Chhabra</h4>
                         </a>
-                        <a class="linked-in-logo-container" href="https://www.linkedin.com/in/pierremoutounetcartan/">
+                        {{!-- <a class="linked-in-logo-container" href="https://www.linkedin.com/in/isaac-zhu-a1b68315b/">
+                            <img class="linked-in-logo" src="./assets/images/linkedin-logo-blue.svg" />
+                        </a> --}}
+                        <a class="text-dark" href="#">
+                            <h6 class="card-text serif">Head of Buy-Side Corporate Relations</h5>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 text-center">
+                <div class="card committee-card">
+                    <img class="card-img-top" src="./assets/images/committee/hsellside.jpg" alt="Head of Sell-side profile pic">
+                    <div class="card-body">
+                        <a class="text-dark" href="./author/cio">
+                            <h4 class="card-title serif">Yukun Zhu</h4>
+                        </a>
+                        <a class="linked-in-logo-container" href="https://www.linkedin.com/in/isaac-zhu-a1b68315b/">
                             <img class="linked-in-logo" src="./assets/images/linkedin-logo-blue.svg" />
                         </a>
-                        <a class="text-dark" href="./author/treasurer">
+                        <a class="text-dark" href="./author/cio">
+                            <h6 class="card-text serif">Head of Sell-Side Corporate Relations</h5>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 text-center">
+                <div class="card committee-card">
+                    <img class="card-img-top" src="./assets/images/committee/treas.jpg" alt="Treasurer profile pic">
+                    <div class="card-body">
+                        <a class="text-dark" href="#">
+                            <h5 class="card-title serif">Adrian-Florin Diaconu</h5>
+                        </a>
+                        {{!-- <a class="linked-in-logo-container" href="https://www.linkedin.com/in/pierremoutounetcartan/">
+                            <img class="linked-in-logo" src="./assets/images/linkedin-logo-blue.svg" />
+                        </a> --}}
+                        <a class="text-dark" href="#">
                             <h5 class="card-text serif">Treasurer</h5>
                         </a>
                     </div>
@@ -259,13 +317,13 @@ into the {body} of the default.hbs template --}}
                 <div class="card committee-card">
                     <img class="card-img-top" src="./assets/images/committee/secretary.jpg" alt="Secretary profile pic">
                     <div class="card-body">
-                        <a class="text-dark" href="./author/secretary">
-                            <h4 class="card-title serif">Nigel Choo</h4>
+                        <a class="text-dark" href="#">
+                            <h4 class="card-title serif">Roshan Shah</h4>
                         </a>
-                        <a class="linked-in-logo-container" href="https://www.linkedin.com/in/nigel-choo-b37222151/">
+                        {{!-- <a class="linked-in-logo-container" href="https://www.linkedin.com/in/nigel-choo-b37222151/">
                             <img class="linked-in-logo" src="./assets/images/linkedin-logo-blue.svg" />
-                        </a>
-                        <a class="text-dark" href="./author/secretary">
+                        </a> --}}
+                        <a class="text-dark" href="#">
                             <h5 class="card-text serif">Secretary</h5>
                         </a>
                     </div>
@@ -273,7 +331,39 @@ into the {body} of the default.hbs template --}}
             </div>
             <div class="col-sm-6 col-lg-4 text-center">
                 <div class="card committee-card">
-                    <img class="card-img-top" src="./assets/images/committee/vptech.jpg" alt="VP Tech profile pic">
+                    <img class="card-img-top" src="./assets/images/committee/hportfolio.jpg" alt="Head of Portfolio Management profile pic">
+                    <div class="card-body">
+                        <a class="text-dark" href="./author/editor">
+                            <h4 class="card-title serif">Thomas Alston</h4>
+                        </a>
+                        <a class="linked-in-logo-container" href="http://linkedin.com/in/tom-alston-458054153">
+                            <img class="linked-in-logo" src="./assets/images/linkedin-logo-blue.svg" />
+                        </a>
+                        <a class="text-dark" href="./author/editor">
+                            <h5 class="card-text serif">Head of Portfolio Management</h5>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 text-center">
+                <div class="card committee-card">
+                    <img class="card-img-top" src="./assets/images/committee/impact.jpg" alt="Head of Impact Investment profile pic">
+                    <div class="card-body">
+                        <a class="text-dark" href="#">
+                            <h4 class="card-title serif">Arnau Bonet</h4>
+                        </a>
+                        {{!-- <a class="linked-in-logo-container" href="https://www.linkedin.com/in/sean-chai-396433161/">
+                            <img class="linked-in-logo" src="./assets/images/linkedin-logo-blue.svg" />
+                        </a> --}}
+                        <a class="text-dark" href="#">
+                            <h5 class="card-text serif">Head of Impact Investing</h5>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {{!-- <div class="col-sm-6 col-lg-4 text-center">
+                <div class="card committee-card">
+                    <img class="card-img-top" src="./assets/images/committee-2018/vptech.jpg" alt="VP Tech profile pic">
                     <div class="card-body">
                         <a class="text-dark" href="./author/vptech">
                             <h4 class="card-title serif">Junhua Li</h4>
@@ -289,7 +379,153 @@ into the {body} of the default.hbs template --}}
             </div>
             <div class="col-sm-6 col-lg-4 text-center">
                 <div class="card committee-card">
-                    <img class="card-img-top" src="./assets/images/committee/vctech.jpg" alt="VP Tech profile pic">
+                    <img class="card-img-top" src="./assets/images/committee-2018/vctech.jpg" alt="VP Tech profile pic">
+                    <div class="card-body">
+                        <a class="text-dark" href="./author/vctech">
+                            <h4 class="card-title serif">Tom Miller</h4>
+                        </a>
+                        <a class="linked-in-logo-container" href="https://www.linkedin.com/in/themiller/">
+                            <img class="linked-in-logo" src="./assets/images/linkedin-logo-blue.svg" />
+                        </a>
+                        <a class="text-dark" href="./author/vctech">
+                            <h5 class="card-text serif">Vice President Technology</h5>
+                        </a>
+                    </div>
+                </div>
+            </div> --}}
+            <div class="col-sm-6 col-lg-4 text-center">
+                <div class="card committee-card">
+                    <img class="card-img-top" src="./assets/images/committee/hevents.jpg" alt="Head of Events profile pic">
+                    <div class="card-body">
+                        <a class="text-dark" href="#">
+                            <h4 class="card-title serif">Ooi Wei Loon</h4>
+                        </a>
+                        {{!-- <a class="linked-in-logo-container" href="https://www.linkedin.com/in/sean-chai-396433161/">
+                            <img class="linked-in-logo" src="./assets/images/linkedin-logo-blue.svg" />
+                        </a> --}}
+                        <a class="text-dark" href="#">
+                            <h5 class="card-text serif">Head of Events &amp; Marketing</h5>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 text-center">
+                <div class="card committee-card">
+                    <img class="card-img-top" src="./assets/images/committee/hdiv.jpg" alt="Head of Diversity profile pic">
+                    <div class="card-body">
+                        <a class="text-dark" href="#">
+                            <h4 class="card-title serif">Chidera Orabueze</h4>
+                        </a>
+                        {{!-- <a class="linked-in-logo-container" href="https://www.linkedin.com/in/isaac-zhu-a1b68315b/">
+                            <img class="linked-in-logo" src="./assets/images/linkedin-logo-blue.svg" />
+                        </a> --}}
+                        <a class="text-dark" href="#">
+                            <h5 class="card-text serif">Head of Diversity &amp; Inclusitivity</h5>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 text-center">
+                <div class="card committee-card">
+                    <img class="card-img-top" src="./assets/images/committee/editor.jpg" alt="Head of Editorial profile pic">
+                    <div class="card-body">
+                        <a class="text-dark" href="#">
+                            <h4 class="card-title serif">Xerxes Chong</h4>
+                        </a>
+                        {{!-- <a class="linked-in-logo-container" href="https://www.linkedin.com/in/isaac-zhu-a1b68315b/">
+                            <img class="linked-in-logo" src="./assets/images/linkedin-logo-blue.svg" />
+                        </a> --}}
+                        <a class="text-dark" href="#">
+                            <h5 class="card-text serif">Head of Editorial</h5>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {{!-- More Team button --}}
+        <div class="news-next-container container row justify-content-center">
+            <a class="older-posts" href="./team"  style="margin-bottom: 2rem;">
+                <span>
+                    More about us
+                </span>
+                <i class="material-icons align-middle">
+                    arrow_forward_ios
+                </i>
+            </a>
+        </div>
+    </div>
+    {{!-- old team container --}}
+    <div id="18-team-container" class="container collapse show d-none">
+        <div class="row justify-content-center">
+            <div class="col-sm-6 col-lg-4 text-center">
+                <div class="card committee-card">
+                    <img class="card-img-top" src="./assets/images/committee-2018/president.jpg" alt="President profile pic">
+                    <div class="card-body">
+                        <a class="text-dark" href="./author/president">
+                            <h4 class="card-title serif">Joe Arrowsmith</h4>
+                        </a>
+                        <a class="linked-in-logo-container" href="https://www.linkedin.com/in/joearrowsmith/">
+                            <img class="linked-in-logo" src="./assets/images/linkedin-logo-blue.svg" />
+                        </a>
+                        <a class="text-dark" href="./author/president">
+                            <h5 class="card-text serif">President</h5>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 col-lg-4 text-center">
+                <div class="card committee-card">
+                    <img class="card-img-top" src="./assets/images/committee-2018/treasurer.jpg" alt="Treasurer profile pic">
+                    <div class="card-body">
+                        <a class="text-dark" href="./author/treasurer">
+                            <h5 class="card-title serif">Pierre Moutounet-Cartan</h5>
+                        </a>
+                        <a class="linked-in-logo-container" href="https://www.linkedin.com/in/pierremoutounetcartan/">
+                            <img class="linked-in-logo" src="./assets/images/linkedin-logo-blue.svg" />
+                        </a>
+                        <a class="text-dark" href="./author/treasurer">
+                            <h5 class="card-text serif">Treasurer</h5>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 text-center">
+                <div class="card committee-card">
+                    <img class="card-img-top" src="./assets/images/committee-2018/secretary.jpg" alt="Secretary profile pic">
+                    <div class="card-body">
+                        <a class="text-dark" href="./author/secretary">
+                            <h4 class="card-title serif">Nigel Choo</h4>
+                        </a>
+                        <a class="linked-in-logo-container" href="https://www.linkedin.com/in/nigel-choo-b37222151/">
+                            <img class="linked-in-logo" src="./assets/images/linkedin-logo-blue.svg" />
+                        </a>
+                        <a class="text-dark" href="./author/secretary">
+                            <h5 class="card-text serif">Secretary</h5>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 text-center">
+                <div class="card committee-card">
+                    <img class="card-img-top" src="./assets/images/committee-2018/vptech.jpg" alt="VP Tech profile pic">
+                    <div class="card-body">
+                        <a class="text-dark" href="./author/vptech">
+                            <h4 class="card-title serif">Junhua Li</h4>
+                        </a>
+                        <a class="linked-in-logo-container" href="https://www.linkedin.com/in/junhua-li">
+                            <img class="linked-in-logo" src="./assets/images/linkedin-logo-blue.svg" />
+                        </a>
+                        <a class="text-dark" href="./author/vptech">
+                            <h5 class="card-text serif">Vice President Technology</h5>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 text-center">
+                <div class="card committee-card">
+                    <img class="card-img-top" src="./assets/images/committee-2018/vctech.jpg" alt="VP Tech profile pic">
                     <div class="card-body">
                         <a class="text-dark" href="./author/vctech">
                             <h4 class="card-title serif">Tom Miller</h4>
@@ -305,7 +541,7 @@ into the {body} of the default.hbs template --}}
             </div>
             <div class="col-sm-6 col-lg-4 text-center">
                 <div class="card committee-card">
-                    <img class="card-img-top" src="./assets/images/committee/vpevents.jpg" alt="VP Events profile pic">
+                    <img class="card-img-top" src="./assets/images/committee-2018/vpevents.jpg" alt="VP Events profile pic">
                     <div class="card-body">
                         <a class="text-dark" href="./author/vpevents">
                             <h4 class="card-title serif">Sean Chai</h4>
@@ -321,7 +557,7 @@ into the {body} of the default.hbs template --}}
             </div>
             <div class="col-sm-6 col-lg-4 text-center">
                 <div class="card committee-card">
-                    <img class="card-img-top" src="./assets/images/committee/vpsponsorship.jpg" alt="VP Marketing and Sponsorship profile pic">
+                    <img class="card-img-top" src="./assets/images/committee-2018/vpsponsorship.jpg" alt="VP Marketing and Sponsorship profile pic">
                     <div class="card-body">
                         <a class="text-dark" href="./author/vpsponsorship">
                             <h4 class="card-title serif">Harry Zou</h4>
@@ -337,7 +573,7 @@ into the {body} of the default.hbs template --}}
             </div>
             <div class="col-sm-6 col-lg-4 text-center">
                 <div class="card committee-card">
-                    <img class="card-img-top" src="./assets/images/committee/vpdiv.jpg" alt="VP Diversity profile pic">
+                    <img class="card-img-top" src="./assets/images/committee-2018/vpdiv.jpg" alt="VP Diversity profile pic">
                     <div class="card-body">
                         <a class="text-dark" href="./author/vpdiversity">
                             <h4 class="card-title serif">David Tyoember</h4>
@@ -353,7 +589,7 @@ into the {body} of the default.hbs template --}}
             </div>
             <div class="col-sm-6 col-lg-4 text-center">
                 <div class="card committee-card">
-                    <img class="card-img-top" src="./assets/images/committee/cio.jpg" alt="CIO profile pic">
+                    <img class="card-img-top" src="./assets/images/committee-2018/cio.jpg" alt="CIO profile pic">
                     <div class="card-body">
                         <a class="text-dark" href="./author/cio">
                             <h4 class="card-title serif">Yukun Zhu</h4>
@@ -369,7 +605,7 @@ into the {body} of the default.hbs template --}}
             </div>
             <div class="col-sm-6 col-lg-4 text-center">
                 <div class="card committee-card">
-                    <img class="card-img-top" src="./assets/images/committee/editor.jpg" alt="Editor-in-Chief profile pic">
+                    <img class="card-img-top" src="./assets/images/committee-2018/editor.jpg" alt="Editor-in-Chief profile pic">
                     <div class="card-body">
                         <a class="text-dark" href="./author/editor">
                             <h4 class="card-title serif">Thomas Alston</h4>
